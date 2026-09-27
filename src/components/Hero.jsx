@@ -1,5 +1,4 @@
 import React from 'react'
-import heroBgImage from 'C:/Users/sajad/.gemini/antigravity/brain/adeb7c49-74f8-4909-83dc-ffe2509e80b5/.user_uploaded/media_1790241961888.png'
 import heroVideo from '../assets/ee.mp4'
 
 export default function Hero({ onOpenContact, videoSrc = heroVideo }) {
@@ -9,13 +8,6 @@ export default function Hero({ onOpenContact, videoSrc = heroVideo }) {
       className="position-relative d-flex flex-column justify-content-center align-items-center text-white overflow-hidden hero-section"
       style={{ height: '850px', minHeight: '850px' }}
     >
-      {/* Background Image from user */}
-      <img
-        src={heroBgImage}
-        alt="VSRP Engineered Rubber Background"
-        className="hero-bg-img"
-      />
-
       {/* Background Video (if provided) */}
       {videoSrc && (
         <video
@@ -24,7 +16,6 @@ export default function Hero({ onOpenContact, videoSrc = heroVideo }) {
           muted
           playsInline
           className="hero-video"
-          poster={heroBgImage}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
